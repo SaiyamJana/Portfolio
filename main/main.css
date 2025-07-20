@@ -1,0 +1,139 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Garamond, serif';
+  background-color: #272829;
+  color: #222;
+  padding: 20px;
+}
+
+#header-container {
+    display : flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#header-container h1 {
+    font-size: 10vw;
+    color: #D8D9DA;
+    font-weight: bold;
+}
+
+@media (min-width: 600px) {
+    #header-container h1 {
+        font-size: 48px;
+    }
+}
+
+/* Intro container styling */
+#intro-container {
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgb(112, 110, 110);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+#intro-container:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background-color: #D8D9DA;
+}
+
+#intro{
+    border-left : 4px solid black;
+    padding-left : 20px;
+}
+
+/* Responsive heading and text */
+h1 {
+    font-size: 8vw;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 5vw;
+    margin: 6px 0;
+}
+
+@media (min-width: 600px) {
+    h1 { font-size: 32px; }
+    p { font-size: 18px; }
+}
+
+/* 🔹 Language Grid */
+#language-skills {
+    margin-top: 30px;
+    background-color: rgb(112, 110, 110);
+    border-radius: 12px;
+    display : flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+#language-skills:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background-color: #D8D9DA;
+}
+
+#language-skills h3 {
+    font-size: 6vw;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.language-card {
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.language-card:hover {
+    transform: scale(1.2);
+}
+
+.language-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.language-card p {
+    font-size: 4vw;
+}
+
+@media (min-width: 600px) {
+    #language-skills h3 {
+        font-size: 24px;
+    }
+
+    .language-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .language-card p {
+        font-size: 16px;
+    }
+}
