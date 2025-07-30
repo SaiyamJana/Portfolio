@@ -36,18 +36,9 @@ body {
   max-width: 90%;
   margin: 40px auto;
   padding: 20px;
-  background-color: rgb(112, 110, 110);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transform-style: preserve-3d;
-}
-
-#intro-container:hover {
-    transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    background-color: #D8D9DA;
 }
 
 #intro{
@@ -66,6 +57,45 @@ p {
     margin: 6px 0;
 }
 
+/* Modal (hidden by default) */
+.modal {
+    display: none; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 12px;
+    height:90%;
+    width: 90%;
+    max-width: 600px;
+    bottom : 5%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    position: relative;
+    overflow:auto;
+}
+
+    /* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+.close:hover {
+  color: black;
+}
+
+
 @media (min-width: 600px) {
     h1 { font-size: 32px; }
     p { font-size: 18px; }
@@ -74,18 +104,23 @@ p {
 /* 🔹 Language Grid */
 #language-skills {
     margin-top: 30px;
-    background-color: rgb(112, 110, 110);
     border-radius: 12px;
     display : flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+}
+
+.motion{
+    background-color: rgb(174, 168, 168);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     transform-style: preserve-3d;
 }
 
-#language-skills:hover {
+.motion:hover {
+    background-color: #D8D9DA;
     transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    background-color: #D8D9DA;
+    
 }
 
 #language-skills h3 {
@@ -105,7 +140,9 @@ p {
 .language-card {
     text-align: center;
     font-weight: bold;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, z-index 0.1s ease;
+    cursor: pointer;
+    position: relative;
 }
 
 .language-card:hover {
@@ -137,3 +174,4 @@ p {
         font-size: 16px;
     }
 }
+
