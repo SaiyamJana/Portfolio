@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav_bar{
+    background-color: black;
+    height:5rem;
+    width:100%;
+    position:fixed;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+
+
+.nav_logo {
+    margin: 5px;
+    height: 85%;
+    width: 7.5%;
+    background-color: red;
+    background-image: url("./images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.nav_logo:hover{
+    border:2px solid white;
+}
+
+.nav_search{
+    display:flex;
+    /* justify-content:space-evenly; */
+    width:100%;
+    height:3rem;
+    border-radius: 4px;
+    margin:5px;
+}
+.search_select{
+    color:#0F1111;
+    background-color:#E6E6E6;
+    width:3rem;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius:4px;
+    border:none;
+    text-align:center;
+}
+.search_input {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    border: none;
+}
+.search_icon{
+    border:none;
+    width:3rem;
+    font-size: 1.2rem;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color:rgb(236, 171, 86);
+}
+.search_input:hover{
+    border:2px solid orange;
+}
+
+.nav_buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Adjust space from the search */
+}
+
+.stored_button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 15px; /* Space between buttons */
+}
+
+.stored_button:hover {
+    background-color: #45a049;
+}
+
+.logout_button {
+    font-weight: 500;
+    height: 50%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: rgb(236, 171, 86);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.logout_button{
+    font-weight:500;
+    height:50%;
+}
+.logout_button:hover{
+    border:2px solid orange;
+}
+
+.main {
+    color: brown;
+    background-color: rgb(107, 175, 221);
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.bookshelf {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 200px; /* Adjust the height based on your design */
+    background-color: #8B4513; /* Brown color for the shelf */
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px; /* Add some margin to separate from other elements */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for the shelf */
+    animation: jump 1s ease infinite; /* Jumping animation */
+}
+
+/* Jumping animation for the shelf */
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Original position */
+    }
+    40% {
+        transform: translateY(-15px); /* Jump up */
+    }
+    60% {
+        transform: translateY(-10px); /* Slightly lower position */
+    }
+}
+
+.book {
+    width: 30px; /* Width of each book */
+    height: 80px; /* Base height of each book */
+    margin: 0 5px; /* Space between books */
+    background-color: #FFD700; /* Gold color for the books */
+    border-radius: 3px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative; /* Positioning for stacking effects */
+}
+
+/* Hover effect */
+.book:hover {
+    transform: translateY(-10px) rotateY(5deg); /* Slightly lift and rotate on hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Varying book heights */
+#book1 { height: 70px; background-color: #FF6347; animation-delay: 0s; }
+#book2 { height: 90px; background-color: #4682B4; animation-delay: 0.2s; }
+#book3 { height: 80px; background-color: #32CD32; animation-delay: 0.4s; }
+#book4 { height: 85px; background-color: #FF4500; animation-delay: 0.6s; }
+#book5 { height: 75px; background-color: #FFD700; animation-delay: 0.8s; }
+
+/* Animation effect for swaying books */
+@keyframes sway {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+/* Apply sway animation to all books */
+.book {
+    animation: sway 4s infinite alternate; /* Infinite sway animation */
+}
+
+.main_content{
+    
+    height:70%;
+    width:50%;
+    margin:20px;
+    
+}
+.Book_Vault{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    font-size:xx-large;
+    left:10px;
+}
+.main_content p {
+    font-family: 'Brush Script MT', cursive; /* Handwriting-style font */
+    color: #3b3b3b; /* Darker gray for readability */
+    font-size: 1.2rem;
+    line-height: 1.6; /* Space out lines for readability */
+    margin-bottom: 10px;
+}
+
+/* Optional: Add some color differentiation to the list items */
+.main_content .p2 {
+    color: #4b4b8b; /* Muted blue for contrast */
+    font-style: italic; /* Italicize for style */
+}
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav_bar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .main {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+} 
+.footer-section h4 {
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.footer-section p {
+    margin: 0;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin: 5px 0;
+}
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+.social-links {
+    display: flex;
+    justify-content: space-around;
+}
+.social-links li {
+    margin: 0 5px;
+}
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.clock {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    color: white;
+    background-color: #333;
+    padding: 15px 25px;
+    border-radius: 10px;
+    
+    margin-right : 1px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+    .clock {
+        font-size: 2rem;
+        padding: 10px 15px;
+    }
+}
+
+.add-book-section {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.add-book-section h2 {
+    margin-bottom: 10px;
+}
+
+.add-book-section input,
+.add-book-section textarea,
+.add-book-section select {
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.add-book-section button {
+    padding: 10px 20px;
+    background-color: rgb(236, 171, 86);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-book-section button:hover {
+    background-color: orange;
+}
+
+.book-preview {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e0f7fa;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.suggestions-box {
+    position: absolute;
+    top: 3rem; /* Adjust based on search box position */
+    width: calc(100% - 6rem); /* Adjust to fit the search bar width */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+.no-results {
+    padding: 10px;
+    color: #888;
+    font-style: italic;
+}
+
+.book-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+

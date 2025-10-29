@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Card</title>
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Create a New Card</h1>
+        <div class="form">
+            <div class="input">
+                <input type="text" id="name" placeholder="Enter Your Name">
+                <span class="error-message" id="nameError"></span>
+            </div>
+            <div class="input">
+                <input type="text" id="collegeId" placeholder="Enter Your College ID">
+                <span class="error-message" id="collegeIdError"></span>
+            </div>
+            <div class="input">
+                <input type="password" id="password" placeholder="Create password">
+                <span class="error-message" id="passwordError"></span>
+            </div>
+            <div class="input">
+                <input type="password" id="confirmPassword" placeholder="Enter password again">
+                <span class="error-message" id="confirmPasswordError"></span>
+            </div>
+            <button class="submit" onclick="validateForm()">Submit</button>
+        </div>
+    </div>
+    <script src="create.js"></script>
+</body>
+</html>

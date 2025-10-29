@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Vault</title>
+    <link rel="stylesheet" href="libriary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="nav_bar">
+            <div class="nav_logo"></div>
+    
+            <div class="nav_search">
+                <select class="search_select">
+                    <option value="books">Books</option>
+                    <!-- Add other options as needed -->
+                </select>
+                <input type="text" id="searchInput" class="search_input" placeholder="Search for books..." />
+                <button class="search_icon">🔍</button>
+            
+                <!-- Suggestion Box Container -->
+                <div class="suggestions-box" style="display: none;"></div>
+            </div>
+            <div class="nav_buttons">
+                <button class="stored_button" id="storedButton">
+                    Stored
+                </button>
+            </div>
+    
+            <div class="logout">
+                <button class="logout_button">
+                    <a href="homepage.html" style="text-decoration: none">
+                        Log out
+                    </a>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main">
+            <div class="bookshelf">
+                <div class="book" id="book1"></div>
+                <div class="book" id="book2"></div>
+                <div class="book" id="book3"></div>
+                <div class="book" id="book4"></div>
+                <div class="book" id="book5"></div>
+            </div>
+            
+            <div class="main_content">
+                <div class="Book_Vault"><h1>BookVault</h1></div>
+                <p class="p1"><h1>Home Of Books</h1></p>
+                <p class="p2"><h3>1 . Access to books, eBooks, and online databases</h3></p>
+                <p class="p2"><h3>2 . Track your reading progress, rate and review</h3></p>
+                <p class="p2"><h3>3 . Find your new favorite book with personalized recommendations</h3></p>
+                <p class="p2"><h3>4 . Reduces the need for physical trips to the library, promoting sustainability by minimizing carbon footprint</h3></p>
+            
+            </div>
+            <div class="clock" id="digitalClock"></div>
+        </div>
+        
+        <div class="add-book-section">
+            <h2>Add a Book</h2>
+            <form id="book-form">
+                <input type="text" id="book-title" placeholder="Book Title" required>
+                <input type="text" id="author-name" placeholder="Author Name" required>
+                <input type="date" id="published-date" required>
+                <textarea id="book-info" placeholder="Information about the book" required></textarea>
+                <input type="text" id="shelf-location" placeholder="Shelf Location" required>
+                <select id="online-availability" required>
+                    <option value="">Available Online?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <button type="submit">Add Book</button>
+            </form>
+            <div id="book-preview" class="book-preview"></div>
+        </div>
+        <div id="book-list"></div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Book Vault</h4>
+                <p>Gates are Open for you , Just Enter</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Search Catalog</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul class="social-links">
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>123, XYZ City , XYZ Country</p>
+                <p>Email: <a href="saiyamjana713@gmail.com">saiyam@library.com</a></p>
+                <p>Phone: 8928338954</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Book Vault. All rights reserved.</p>
+        </div>
+      </footer>
+      <script src="libriary.js"></script>
+</body>
+</html>
