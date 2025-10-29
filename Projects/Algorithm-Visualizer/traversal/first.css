@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #f3f3f3;
+}
+
+#controls {
+  margin-bottom: 10px;
+}
+
+canvas {
+  background: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}

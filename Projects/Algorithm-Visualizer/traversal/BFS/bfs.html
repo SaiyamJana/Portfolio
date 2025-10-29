@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>BFS — Graph Visualizer</title>
+		<link rel="stylesheet" href="bfs.css" />
+	</head>
+	<body>
+		<header class="top-header">
+			<div class="header-inner">
+				<a class="back-btn" href="../first.html" title="Back to Home">← Back</a>
+				<div class="titles">
+					<h1 class="main-title">GRAPH VISUALIZER</h1>
+					<p class="subtitle">Breadth-First Search (BFS)</p>
+				</div>
+				<nav class="header-actions">
+					<button class="btn btn-primary" id="resetBtn">Reset</button>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container">
+			<section class="controls">
+				<!-- Controls for BFS -->
+				<div class="control-group">
+					<label>
+						Start Node:
+						<input id="startNode" type="text" placeholder="e.g. A" />
+					</label>
+					<button class="btn" id="runBfs">Run BFS</button>
+				</div>
+
+				<hr />
+
+				<div class="control-group">
+					<label>
+						Add Node (vertex name):
+						<input id="addNodeName" type="number" placeholder="e.g. B" />
+					</label>
+					<button class="btn" id="addNodeBtn">Add Node</button>
+				</div>
+
+				<div class="control-group">
+					<label>
+						Add Edge (vertex1, vertex2):
+						<div class="edge-inputs">
+							<input id="edgeA" type="number" placeholder="From" />
+							<input id="edgeB" type="number" placeholder="To" />
+						</div>
+					</label>
+					<button class="btn" id="addEdgeBtn">Add Edge</button>
+				</div>
+			</section>
+
+			<section class="visualizer" id="visualizer">
+				<header class="viz-header">
+					<div class="viz-controls">
+						<button class="btn" id="vizPrev">← Prev</button>
+						<span class="step-counter" id="stepCounter">Step 0 / 0</span>
+						<button class="btn" id="vizNext">Next →</button>
+					</div>
+				</header>
+				<!-- Graph visualizer canvas / svg will be inserted here by bfs.js -->
+				<div class="viz-canvas" id="vizCanvas">
+					<p class="placeholder">Graph visual will appear here.</p>
+				</div>
+			</section>
+		</main>
+
+		<script src="bfs.js" defer></script>
+	</body>
+</html>
+
